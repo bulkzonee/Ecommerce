@@ -1,73 +1,76 @@
-# Welcome to your Lovable project
+Este projeto é um aplicativo web moderno construído com React, Vite e TypeScript, utilizando Tailwind CSS e shadcn/ui para uma interface elegante e responsiva.
 
-## Project info
+📂 Tecnologias Utilizadas
 
-**URL**: https://lovable.dev/projects/750c5a74-4bb9-4b42-9227-cee6709bf852
+⚡ Vite
+ – Bundler rápido e otimizado
 
-## How can I edit this code?
+⚛️ React
+ – Biblioteca para criação de interfaces
 
-There are several ways of editing your application.
+🟦 TypeScript
+ – Superset tipado do JavaScript
 
-**Use Lovable**
+🎨 Tailwind CSS
+ – Estilização utilitária
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/750c5a74-4bb9-4b42-9227-cee6709bf852) and start prompting.
+🧩 shadcn/ui
+ – Componentes acessíveis e customizáveis
 
-Changes made via Lovable will be committed automatically to this repo.
+🛠️ Como Rodar o Projeto
+Pré-requisitos
 
-**Use your preferred IDE**
+Node.js
+ (recomendado instalar via nvm
+)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+npm ou yarn instalado
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Passo a passo
+# 1. Clone o repositório
+git clone <URL_DO_SEU_REPOSITORIO>
 
-Follow these steps:
+# 2. Entre na pasta do projeto
+cd <NOME_DO_PROJETO>
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# 3. Instale as dependências
+npm install
+# ou
+yarn install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Inicie o servidor de desenvolvimento
 npm run dev
-```
+# ou
+yarn dev
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+O projeto estará disponível em: http://localhost:5173
+ (ou porta definida pelo Vite).
 
-**Use GitHub Codespaces**
+📦 Scripts Disponíveis
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+npm run dev – Inicia o servidor de desenvolvimento
 
-## What technologies are used for this project?
+npm run build – Gera a versão de produção
 
-This project is built with:
+npm run preview – Serve a build de produção localmente
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+🚀 Deploy
 
-## How can I deploy this project?
+Este projeto pode ser facilmente implantado em serviços como:
 
-Simply open [Lovable](https://lovable.dev/projects/750c5a74-4bb9-4b42-9227-cee6709bf852) and click on Share -> Publish.
+Vercel
 
-## Can I connect a custom domain to my Lovable project?
+Netlify
 
-Yes, you can!
+Render
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Qualquer servidor estático que suporte aplicações SPA (Single Page Application).
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+🌐 Domínio Personalizado
+
+Após o deploy, você pode conectar um domínio próprio no provedor de hospedagem escolhido (ex.: Vercel, Netlify).
+
+📜 Licença
+
+Este projeto é distribuído sob a licença MIT.
