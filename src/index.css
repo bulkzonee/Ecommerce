@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bulkzone Design System - Revolutionary Streetwear E-commerce
+All colors MUST be HSL. Aggressive, bold, conversion-focused design.
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors - Bulkzone Palette */
+    --bulkzone-red: 354 95% 45%;           /* #E30613 - Primary CTA color */
+    --bulkzone-red-dark: 354 95% 35%;     /* #B50B11 - Hover states */
+    --bulkzone-black: 0 0% 7%;            /* #111111 - Strong texts, header, footer */
+    --bulkzone-charcoal: 0 0% 20%;        /* #333333 - Secondary texts */
+    --bulkzone-gray-light: 0 0% 96%;      /* #F5F5F5 - Card backgrounds */
+    
+    /* Semantic Design Tokens */
+    --background: 0 0% 100%;               /* Pure white */
+    --foreground: 0 0% 7%;                 /* Bulkzone black */
+
+    --card: 0 0% 96%;                      /* Light gray cards */
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 354 95% 45%;                /* Bulkzone red */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;                 /* Light gray */
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 20%;          /* Charcoal gray */
+
+    --accent: 354 95% 45%;                 /* Bulkzone red for accents */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 354 95% 45%;                   /* Bulkzone red */
+
+    --radius: 0.375rem;                    /* Slightly rounded for modern look */
+
+    /* Custom Bulkzone Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--bulkzone-red-dark)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(var(--background)));
+    --gradient-urgent: linear-gradient(90deg, hsl(var(--primary)), hsl(354 100% 50%));
+
+    /* Shadows with Brand Colors */
+    --shadow-red: 0 10px 25px -5px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 15px -2px hsl(0 0% 0% / 0.1);
+    --shadow-intense: 0 20px 40px -10px hsl(var(--primary) / 0.4);
+
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+/* Bulkzone Custom Components & Utilities */
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-red-600 text-primary-foreground font-bold px-8 py-4 rounded-lg;
+    @apply transition-all duration-300 hover:shadow-2xl hover:scale-105;
+    @apply border-0 text-lg tracking-wide uppercase;
+    box-shadow: var(--shadow-red);
+  }
+
+  .btn-hero:hover {
+    @apply brightness-110;
+    box-shadow: var(--shadow-intense);
+  }
+
+  /* Streetwear Typography */
+  .text-manifesto {
+    @apply font-black text-4xl md:text-6xl tracking-tight leading-tight;
+    @apply bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent;
+  }
+
+  .text-urban {
+    @apply font-bold text-xl md:text-2xl tracking-wide uppercase;
+    @apply text-foreground;
+  }
+
+  /* Product Card Effects */
+  .product-card {
+    @apply bg-card rounded-lg overflow-hidden transition-all duration-300;
+    @apply hover:shadow-xl hover:-translate-y-2 cursor-pointer;
+    box-shadow: var(--shadow-card);
+  }
+
+  .product-card:hover {
+    box-shadow: var(--shadow-red);
+  }
+
+  /* Urgency Indicators */
+  .urgency-badge {
+    @apply bg-gradient-to-r from-primary to-red-600 text-white text-sm font-bold px-3 py-1 rounded-full;
+    @apply animate-pulse;
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply font-bold text-muted-foreground hover:text-primary transition-colors duration-200;
+    @apply relative uppercase tracking-wide;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Conversion Elements */
+  .conversion-highlight {
+    @apply bg-gradient-to-r from-primary/10 to-red-100 border-l-4 border-primary px-4 py-3 rounded-r;
+    @apply text-foreground font-semibold;
+  }
+
+  .stock-warning {
+    @apply text-primary font-bold text-sm flex items-center gap-2;
+    @apply animate-bounce;
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  /* Custom Gradients */
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-urgent-gradient {
+    background: var(--gradient-urgent);
+  }
+
+  /* Custom Shadows */
+  .shadow-red {
+    box-shadow: var(--shadow-red);
+  }
+
+  .shadow-intense {
+    box-shadow: var(--shadow-intense);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
