@@ -32,10 +32,10 @@ const Cart = () => {
       .map((item) => `${item.name} (${item.size}) - Qtd: ${item.quantity} - ${formatPrice(item.price * item.quantity)}`)
       .join('\n');
     
-    const total = formatPrice(getTotalPrice());
+    const total = formatPrice(getTotalPrice());s
     const message = `🛒 *Pedido Bulkzone*\n\n${itemsList}\n\n*Total: ${total}*\n\nGostaria de finalizar este pedido!`;
     
-    const whatsappNumber = "5511999999999";
+    const whatsappNumber = "51980485249";
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };

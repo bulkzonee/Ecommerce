@@ -124,7 +124,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-start gap-3 text-gray-400">
                   <MapPin className="h-4 w-4 mt-1" />
-                  <span>Canoas<br />Brasil</span>
+                  <span>Canoas, RS<br />Brasil</span>
                 </div>
               </div>
 
@@ -143,7 +143,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-sm">
-              © 2024 Bulkzone. Todos os direitos reservados. Desenvolvido por <a href="www.zypex.com.br">Zypex<strong></strong></a>
+              © 2025 Bulkzone. Todos os direitos reservados. Desenvolvido por <a href="www.zypex.com.br">Zypex<strong></strong></a>
             </div>
             
             <div className="flex items-center gap-4">

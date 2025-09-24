@@ -44,14 +44,14 @@ const mockRelatedProducts = [
     name: "Camiseta Streetwear Underground",
     price: 79.90,
     originalPrice: 109.90,
-    image: "/src/assets/product-2.jpg",
+    image: "/src/assets/product-2.jpeg",
     isNew: true,
   },
   {
     id: "3", 
     name: "Regata Bulkzone Urban",
     price: 69.90,
-    image: "/src/assets/product-3.jpg",
+    image: "/src/assets/product-3.jpeg",
     stockCount: 5,
   },
   {
@@ -59,7 +59,7 @@ const mockRelatedProducts = [
     name: "Camiseta Anime Exclusive",
     price: 94.90,
     originalPrice: 119.90,
-    image: "/src/assets/product-4.jpg",
+    image: "/src/assets/product-4.jpeg",
     salesCount: 156,
   },
 ];

@@ -31,7 +31,7 @@ const FloatingWhatsApp = () => {
             <div className="bg-green-500 text-white p-4 rounded-t-lg flex justify-between items-center">
               <div>
                 <h3 className="font-bold">Chat WhatsApp</h3>
-                <p className="text-sm opacity-90">Bulkzone Streetwear</p>
+                <p className="text-sm opacity-90">Bulkzone</p>
               </div>
               <Button
                 variant="ghost"
